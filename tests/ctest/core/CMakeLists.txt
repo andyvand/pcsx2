@@ -22,9 +22,12 @@ if(DISABLE_ADVANCE_SIMD)
 		set(compile_options_avx  -msse4.1 -mavx)
 		set(compile_options_sse4 -msse4.1)
 	else()
+	   if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "x86_64" OR "${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "amd64" OR
+	      "${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "AMD64" OR "${CMAKE_OSX_ARCHITECTURES}" STREQUAL "x86_64")
 		set(compile_options_avx2 -march=haswell -mtune=haswell)
 		set(compile_options_avx  -march=sandybridge -mtune=sandybridge)
 		set(compile_options_sse4 -msse4.1 -mtune=nehalem)
+	   endif()
 	endif()
 	# ODR violation time!
 	# Everything would be fine if we only defined things in cpp files, but C++ tends to like inline functions (STL anyone?)

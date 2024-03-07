@@ -1,4 +1,4 @@
-add_library(glslang
+add_library(glslang STATIC
 	glslang/glslang/CInterface/glslang_c_interface.cpp
 	glslang/glslang/GenericCodeGen/CodeGen.cpp
 	glslang/glslang/GenericCodeGen/Link.cpp

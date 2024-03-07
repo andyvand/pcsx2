@@ -253,5 +253,11 @@ if(WIN32)
 	)
 endif()
 
+If(APPLE)
+	target_link_libraries(pcsx2-qt PRIVATE
+		cpuinfo
+	)
+endif()
+
 fixup_file_properties(pcsx2-qt)
 setup_main_executable(pcsx2-qt)

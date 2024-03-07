@@ -11,7 +11,7 @@ set(SRCS
 	src/serialization.h
 )
 
-add_library(discord-rpc ${SRCS})
+add_library(discord-rpc STATIC ${SRCS})
 target_include_directories(discord-rpc PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include")
 target_link_libraries(discord-rpc rapidjson)
 

@@ -5,7 +5,7 @@ if(NOT TOP_CMAKE_WAS_SOURCED)
 	It is advice to delete all wrongly generated cmake stuff => CMakeFiles & CMakeCache.txt")
 endif(NOT TOP_CMAKE_WAS_SOURCED)
 
-add_library(common)
+add_library(common STATIC)
 
 # x86emitter sources
 target_sources(common PRIVATE

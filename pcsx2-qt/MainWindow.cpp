@@ -128,7 +128,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::initialize()
 {
-#ifdef __APPLE__
+#if defined(__APPLE__)
 	CocoaTools::AddThemeChangeHandler(this, [](void* ctx) {
 		// This handler is called *before* the style change has propagated far enough for Qt to see it
 		// Use RunOnUIThread to delay until it has

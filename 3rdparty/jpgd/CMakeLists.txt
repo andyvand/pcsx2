@@ -1,4 +1,4 @@
-add_library(jpgd
+add_library(jpgd STATIC
 	jpgd.cpp
 	jpgd.h
 	jpgd_idct.h

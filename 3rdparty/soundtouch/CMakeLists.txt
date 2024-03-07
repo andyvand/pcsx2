@@ -1,4 +1,4 @@
-add_library(pcsx2-soundtouch
+add_library(pcsx2-soundtouch STATIC
 	source/SoundTouch/AAFilter.cpp
 	source/SoundTouch/BPMDetect.cpp
 	source/SoundTouch/cpu_detect_x86.cpp
