@@ -1,6 +1,4 @@
-add_library(glad
-	src/glad.c
-)
+add_library(glad STATIC src/glad.c)
 
 if(WIN32)
 	target_sources(glad PRIVATE

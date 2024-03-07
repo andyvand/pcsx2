@@ -25,7 +25,7 @@ else()
   string(REPLACE "/EHsc" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}") # Disable Exceptions
 endif()
 
-add_library(cubeb
+add_library(cubeb STATIC
   src/cubeb.c
   src/cubeb_mixer.cpp
   src/cubeb_resampler.cpp
